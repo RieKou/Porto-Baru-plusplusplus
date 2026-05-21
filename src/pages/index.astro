@@ -5,9 +5,10 @@ import ServicesSection from '../components/ServicesSection.astro';
 import ArtworkSection from '../components/ArtworkSection.astro';
 import WebsiteProjectsSection from '../components/WebsiteProjectsSection.astro';
 import KopiKanan from '../components/KopiKanan.astro';
+import Skills from '../components/akuJagoDiSini.astro';
 
 const pageTitle =
-  'Vanessa Lee | Digital Illustrator & Digital Designer';
+  'Vanessa Lee | Portfolio';
 ---
 
 <!DOCTYPE html>
@@ -66,7 +67,7 @@ const pageTitle =
       <header class="site-header">
         <div class="brand">
           <span class="brand-dot"></span>
-          Vanessa Lee / VLO
+          Latest Portfolio
         </div>
 
         <div class="header-right">
@@ -96,24 +97,24 @@ const pageTitle =
           <div class="hero-copy">
             <div class="hero-badge">
               ✦ Digital Illustrator &
-              Front-End Developer
+              Full-stack Web Developer
             </div>
 
             <h1>
-              Creating
+              Hi, I am
               <span>
-                immersive visuals
+                Vanessa Lee
               </span>
-              and modern digital
-              experiences.
             </h1>
 
             <p class="hero-text">
-              Combining illustration,
-              premium UI aesthetics,
-              motion, and frontend
-              development into one
-              cohesive experience.
+              A passionate <span> digital illustrator </span> and 
+              <span>full-stack web developer</span>. I create captivating digital 
+              art and design immersive websites that blend 
+              creativity with functionality. With a keen eye 
+              for detail and a love for storytelling, I bring 
+              ideas to life through vibrant visuals and seamless 
+              user experiences.
             </p>
 
             <div class="hero-actions">
@@ -174,16 +175,17 @@ const pageTitle =
               alt="Profile"
               class="hero-image"
 			  width="600px"
-			  height="600px"
+			  height="525px"
             />
           </div>
         </section>
 
         <AboutSection />
         <ServicesSection />
+        <!-- <Skills /> -->
         <ArtworkSection />
         <WebsiteProjectsSection />
-		<KopiKanan />
+		    <KopiKanan />
       </main>
     </div>
 
@@ -492,6 +494,13 @@ const pageTitle =
         cursor: pointer;
       }
 
+      body.dark .button-secondary {
+        background: rgba(255, 255, 255, 0.06);
+        color: #f8fafc;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
+      }
+
       /* HERO */
 
       .hero {
@@ -672,279 +681,6 @@ const pageTitle =
           rotate(-1deg);
       }
 
-      /* SECTION */
-
-      .section {
-        max-width: 1300px;
-
-        margin: 0 auto;
-
-        padding: 7rem 2rem;
-      }
-
-      .section-title {
-        margin-bottom: 3rem;
-      }
-
-      .eyebrow {
-        color: #7c3aed;
-
-        text-transform: uppercase;
-
-        letter-spacing: 0.2em;
-      }
-
-      .section-title h2 {
-        font-size: clamp(
-          2.3rem,
-          5vw,
-          4rem
-        );
-
-        margin-top: 0.5rem;
-      }
-
-      .section-text {
-        color: var(--muted);
-
-        line-height: 1.9;
-      }
-
-      /* GLASS */
-
-      .glass-panel {
-        background: var(--glass);
-
-        backdrop-filter: blur(20px);
-
-        border-radius: 36px;
-
-        border: 1px solid
-          var(--border);
-      }
-
-      /* CARDS */
-
-      .cards-grid,
-      .project-cards {
-        display: grid;
-        grid-template-columns: repeat(
-          3,
-          1fr
-        );
-
-        gap: 1.5rem;
-      }
-
-      .card {
-        padding: 2rem;
-
-        border-radius: 32px;
-
-        background: var(--glass);
-
-        backdrop-filter: blur(18px);
-
-        transition: 0.35s;
-      }
-
-      .card:hover {
-        transform: translateY(-10px);
-      }
-
-      .card-icon {
-        font-size: 2rem;
-      }
-
-      /* PROJECTS */
-
-      .project-card {
-        position: relative;
-
-        overflow: hidden;
-
-        border-radius: 32px;
-      }
-
-      .project-image {
-        width: 100%;
-        height: 420px;
-
-        object-fit: cover;
-
-        transition: 0.4s;
-      }
-
-      .project-card:hover
-        .project-image {
-        transform: scale(1.08);
-      }
-
-      .project-overlay {
-        position: absolute;
-        inset: 0;
-
-        display: flex;
-        align-items: end;
-
-        padding: 2rem;
-
-        background:
-          linear-gradient(
-            to top,
-            rgba(
-              0,
-              0,
-              0,
-              0.8
-            ),
-            transparent
-          );
-
-        color: white;
-
-        font-size: 1.3rem;
-
-        font-weight: 700;
-      }
-
-      /* WEBSITE */
-
-      .carousel-wrapper {
-        position: relative;
-      }
-
-      .carousel-track {
-        display: flex;
-
-        gap: 1.5rem;
-
-        overflow-x: auto;
-
-        scroll-behavior: smooth;
-
-        scrollbar-width: none;
-      }
-
-      .carousel-track::-webkit-scrollbar {
-        display: none;
-      }
-
-      .website-card {
-        min-width: 450px;
-
-        border-radius: 32px;
-
-        overflow: hidden;
-
-        background: var(--glass);
-
-        backdrop-filter: blur(18px);
-
-        transition: 0.35s;
-      }
-
-      .website-card:hover {
-        transform:
-          translateY(-8px)
-          scale(1.01);
-      }
-
-      .iframe-wrap {
-        position: relative;
-
-        width: 100%;
-
-        min-height: 220px;
-        aspect-ratio: 16 / 9;
-
-        overflow: hidden;
-      }
-
-      .iframe-wrap::after {
-        content: '';
-
-        position: absolute;
-        inset: 0;
-
-        background:
-          linear-gradient(
-            to top,
-            rgba(
-              0,
-              0,
-              0,
-              0.12
-            ),
-            transparent
-          );
-
-        pointer-events: none;
-      }
-
-      .website-card iframe {
-        width: 100%;
-        height: 100%;
-
-        border: none;
-
-        transform: none;
-
-        pointer-events: none;
-      }
-
-      .website-content {
-        padding: 1.8rem;
-      }
-
-      .tag {
-        display: inline-block;
-
-        padding: 0.45rem 0.8rem;
-
-        border-radius: 999px;
-
-        background:
-          linear-gradient(
-            135deg,
-            #7c3aed22,
-            #06b6d422
-          );
-
-        color: #7c3aed;
-
-        font-size: 0.8rem;
-      }
-
-      .carousel-btn {
-        position: absolute;
-
-        top: 50%;
-
-        transform: translateY(-50%);
-
-        width: 60px;
-        height: 60px;
-
-        border-radius: 999px;
-
-        border: none;
-
-        background: white;
-
-        cursor: pointer;
-
-        z-index: 10;
-      }
-
-      .prev {
-        left: -20px;
-      }
-
-      .next {
-        right: -20px;
-      }
-
       /* DARK */
 
       body.dark {
@@ -1122,40 +858,6 @@ const pageTitle =
         }
       );
 
-      // CAROUSEL
-
-      const track =
-        document.getElementById(
-          'carouselTrack'
-        );
-
-      document
-        .getElementById('nextBtn')
-        ?.addEventListener(
-          'click',
-          () => {
-            if (track) {
-              track.scrollBy({
-                left: 480,
-                behavior: 'smooth',
-              });
-            }
-          }
-        );
-
-      document
-        .getElementById('prevBtn')
-        ?.addEventListener(
-          'click',
-          () => {
-            if (track) {
-              track.scrollBy({
-                left: -480,
-                behavior: 'smooth',
-              });
-            }
-          }
-        );
     </script>
   </body>
 </html>

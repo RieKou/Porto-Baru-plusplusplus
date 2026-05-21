@@ -1,15 +1,17 @@
 ---
-const title = 'Elegant visuals and interactive development.';
+const title = 'My Education and Experience';
+import Binus from '../assets/bunis.png';
 ---
 
 <section id="about" class="section glass-panel">
   <div class="section-title">
     <p class="eyebrow">About Me</p>
+    <img src={Binus.src} width="200px" alt="BINUS University">
     <h2>{title}</h2>
   </div>
 
   <p class="section-text">
-    I specialize in digital illustration and immersive web experiences focused on visual hierarchy, motion, interaction, and modern UI systems.
+    I'm currently a student at BINUS University Online Learning, pursuing a degree in Computer Science. With a strong passion for technology and creativity, I have been actively involved in various projects and internships that have allowed me to apply my skills in real-world scenarios. My experience includes working on web development projects, collaborating with cross-functional teams, and continuously learning new technologies to stay at the forefront of the industry. I am eager to leverage my education and experience to contribute to innovative solutions and make a positive impact in the tech world.
   </p>
 </section>
 
@@ -858,63 +860,7 @@ const title = 'Elegant visuals and interactive development.';
     <!-- SCRIPT -->
 
     <script>
-      // THEME
-
-      const themeToggle =
-        document.getElementById(
-          'themeToggle'
-        );
-
-      const storedTheme =
-        localStorage.getItem('theme');
-
-      const prefersDark =
-        window.matchMedia(
-          '(prefers-color-scheme: dark)'
-        ).matches;
-
-      const root = document.body;
-
-      function setTheme(isDark: boolean) {
-        root.classList.toggle(
-          'dark',
-          isDark
-        );
-
-        if (themeToggle) {
-          themeToggle.textContent =
-            isDark
-              ? 'Light Mode'
-              : 'Dark Mode';
-        }
-
-        localStorage.setItem(
-          'theme',
-          isDark
-            ? 'dark'
-            : 'light'
-        );
-      }
-
-      if (storedTheme) {
-        setTheme(
-          storedTheme === 'dark'
-        );
-      } else {
-        setTheme(prefersDark);
-      }
-
-      themeToggle?.addEventListener(
-        'click',
-        () => {
-          setTheme(
-            !root.classList.contains(
-              'dark'
-            )
-          );
-        }
-      );
-
+    
       // CURSOR
 
       const cursor =

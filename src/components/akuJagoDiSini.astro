@@ -1,0 +1,27 @@
+---
+import Vue from '../assets/vuejs.svg';
+import React from '../assets/react.svg';
+import Tailwind from '../assets/tailwind-css.svg';
+import PHP from '../assets/php.svg';
+---
+
+<section>
+  <h2>My Skills</h2>
+  <p>Here are some of the skills I've developed over the years:</p>
+
+  <div class="logos">
+    <img src={Vue.src} alt="Vue.js Logo" class="logo" />
+    <img src={React.src} alt="React Logo" class="logo" />
+    <img src={Tailwind.src} alt="Tailwind CSS Logo" class="logo" />
+    <img src={PHP.src} alt="PHP Logo" class="logo" />
+  </div>
+</section>
+
+<style>
+    .logos {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+        width: 20%;
+    }
+</style>
