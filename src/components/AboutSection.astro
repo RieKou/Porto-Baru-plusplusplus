@@ -1,6 +1,8 @@
 ---
 const title = 'My Education and Experience';
 import Binus from '../assets/bunis.png';
+import CV1 from '../assets/CV_Illust.pdf';
+import CV2 from '../assets/CV_FS.pdf';
 ---
 
 <section id="about" class="section glass-panel">
@@ -13,6 +15,17 @@ import Binus from '../assets/bunis.png';
   <p class="section-text">
     I'm currently a student at BINUS University Online Learning, pursuing a degree in Computer Science. With a strong passion for technology and creativity, I have been actively involved in various projects and internships that have allowed me to apply my skills in real-world scenarios. My experience includes working on web development projects, collaborating with cross-functional teams, and continuously learning new technologies to stay at the forefront of the industry. I am eager to leverage my education and experience to contribute to innovative solutions and make a positive impact in the tech world.
   </p>
+
+  <div class="donglod">
+    <a href={CV1} download class="button button-primary">
+    Download CV [Illustration]
+  </a>
+
+  <a href={CV2} download class="button button-primary">
+    Download CV [Web Development]
+  </a>
+  </div>
+
 </section>
 
 <style>
@@ -75,6 +88,13 @@ import Binus from '../assets/bunis.png';
         overflow-x: hidden;
 
         cursor: none;
+      }
+
+      .donglod{
+        margin-top: 2rem;
+        display: flex;
+        gap: 1rem;
+         
       }
 
       h1,
